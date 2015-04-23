@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1870544E1AE89306009D3F45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1870544D1AE89306009D3F45 /* Foundation.framework */; };
+		187054501AE89306009D3F45 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1870544F1AE89306009D3F45 /* CoreGraphics.framework */; };
+		187054521AE89306009D3F45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187054511AE89306009D3F45 /* UIKit.framework */; };
+		187054541AE89306009D3F45 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187054531AE89306009D3F45 /* CoreData.framework */; };
+		1870545A1AE89306009D3F45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 187054581AE89306009D3F45 /* InfoPlist.strings */; };
+		1870545C1AE89306009D3F45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1870545B1AE89306009D3F45 /* main.m */; };
+		187054601AE89306009D3F45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1870545F1AE89306009D3F45 /* AppDelegate.m */; };
+		187054631AE89306009D3F45 /* VCoach.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 187054611AE89306009D3F45 /* VCoach.xcdatamodeld */; };
+		187054651AE89306009D3F45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187054641AE89306009D3F45 /* Images.xcassets */; };
+		1870546C1AE89306009D3F45 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1870546B1AE89306009D3F45 /* XCTest.framework */; };
+		1870546D1AE89306009D3F45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1870544D1AE89306009D3F45 /* Foundation.framework */; };
+		1870546E1AE89306009D3F45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187054511AE89306009D3F45 /* UIKit.framework */; };
+		1870546F1AE89306009D3F45 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187054531AE89306009D3F45 /* CoreData.framework */; };
+		187054771AE89306009D3F45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 187054751AE89306009D3F45 /* InfoPlist.strings */; };
+		187054791AE89306009D3F45 /* VCoachTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 187054781AE89306009D3F45 /* VCoachTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		187054701AE89306009D3F45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 187054421AE89306009D3F45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 187054491AE89306009D3F45;
+			remoteInfo = VCoach;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1870544A1AE89306009D3F45 /* VCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1870544D1AE89306009D3F45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1870544F1AE89306009D3F45 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		187054511AE89306009D3F45 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		187054531AE89306009D3F45 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		187054571AE89306009D3F45 /* VCoach-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VCoach-Info.plist"; sourceTree = "<group>"; };
+		187054591AE89306009D3F45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1870545B1AE89306009D3F45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1870545D1AE89306009D3F45 /* VCoach-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VCoach-Prefix.pch"; sourceTree = "<group>"; };
+		1870545E1AE89306009D3F45 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1870545F1AE89306009D3F45 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		187054621AE89306009D3F45 /* VCoach.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VCoach.xcdatamodel; sourceTree = "<group>"; };
+		187054641AE89306009D3F45 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1870546A1AE89306009D3F45 /* VCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1870546B1AE89306009D3F45 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		187054741AE89306009D3F45 /* VCoachTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VCoachTests-Info.plist"; sourceTree = "<group>"; };
+		187054761AE89306009D3F45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		187054781AE89306009D3F45 /* VCoachTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCoachTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		187054471AE89306009D3F45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187054501AE89306009D3F45 /* CoreGraphics.framework in Frameworks */,
+				187054541AE89306009D3F45 /* CoreData.framework in Frameworks */,
+				187054521AE89306009D3F45 /* UIKit.framework in Frameworks */,
+				1870544E1AE89306009D3F45 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187054671AE89306009D3F45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1870546C1AE89306009D3F45 /* XCTest.framework in Frameworks */,
+				1870546F1AE89306009D3F45 /* CoreData.framework in Frameworks */,
+				1870546E1AE89306009D3F45 /* UIKit.framework in Frameworks */,
+				1870546D1AE89306009D3F45 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		187054411AE89306009D3F45 = {
+			isa = PBXGroup;
+			children = (
+				187054551AE89306009D3F45 /* VCoach */,
+				187054721AE89306009D3F45 /* VCoachTests */,
+				1870544C1AE89306009D3F45 /* Frameworks */,
+				1870544B1AE89306009D3F45 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1870544B1AE89306009D3F45 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1870544A1AE89306009D3F45 /* VCoach.app */,
+				1870546A1AE89306009D3F45 /* VCoachTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1870544C1AE89306009D3F45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1870544D1AE89306009D3F45 /* Foundation.framework */,
+				1870544F1AE89306009D3F45 /* CoreGraphics.framework */,
+				187054511AE89306009D3F45 /* UIKit.framework */,
+				187054531AE89306009D3F45 /* CoreData.framework */,
+				1870546B1AE89306009D3F45 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		187054551AE89306009D3F45 /* VCoach */ = {
+			isa = PBXGroup;
+			children = (
+				1870545E1AE89306009D3F45 /* AppDelegate.h */,
+				1870545F1AE89306009D3F45 /* AppDelegate.m */,
+				187054641AE89306009D3F45 /* Images.xcassets */,
+				187054611AE89306009D3F45 /* VCoach.xcdatamodeld */,
+				187054561AE89306009D3F45 /* Supporting Files */,
+			);
+			path = VCoach;
+			sourceTree = "<group>";
+		};
+		187054561AE89306009D3F45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				187054571AE89306009D3F45 /* VCoach-Info.plist */,
+				187054581AE89306009D3F45 /* InfoPlist.strings */,
+				1870545B1AE89306009D3F45 /* main.m */,
+				1870545D1AE89306009D3F45 /* VCoach-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		187054721AE89306009D3F45 /* VCoachTests */ = {
+			isa = PBXGroup;
+			children = (
+				187054781AE89306009D3F45 /* VCoachTests.m */,
+				187054731AE89306009D3F45 /* Supporting Files */,
+			);
+			path = VCoachTests;
+			sourceTree = "<group>";
+		};
+		187054731AE89306009D3F45 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				187054741AE89306009D3F45 /* VCoachTests-Info.plist */,
+				187054751AE89306009D3F45 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		187054491AE89306009D3F45 /* VCoach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1870547C1AE89306009D3F45 /* Build configuration list for PBXNativeTarget "VCoach" */;
+			buildPhases = (
+				187054461AE89306009D3F45 /* Sources */,
+				187054471AE89306009D3F45 /* Frameworks */,
+				187054481AE89306009D3F45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VCoach;
+			productName = VCoach;
+			productReference = 1870544A1AE89306009D3F45 /* VCoach.app */;
+			productType = "com.apple.product-type.application";
+		};
+		187054691AE89306009D3F45 /* VCoachTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1870547F1AE89306009D3F45 /* Build configuration list for PBXNativeTarget "VCoachTests" */;
+			buildPhases = (
+				187054661AE89306009D3F45 /* Sources */,
+				187054671AE89306009D3F45 /* Frameworks */,
+				187054681AE89306009D3F45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				187054711AE89306009D3F45 /* PBXTargetDependency */,
+			);
+			name = VCoachTests;
+			productName = VCoachTests;
+			productReference = 1870546A1AE89306009D3F45 /* VCoachTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		187054421AE89306009D3F45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = apple;
+				TargetAttributes = {
+					187054691AE89306009D3F45 = {
+						TestTargetID = 187054491AE89306009D3F45;
+					};
+				};
+			};
+			buildConfigurationList = 187054451AE89306009D3F45 /* Build configuration list for PBXProject "VCoach" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 187054411AE89306009D3F45;
+			productRefGroup = 1870544B1AE89306009D3F45 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				187054491AE89306009D3F45 /* VCoach */,
+				187054691AE89306009D3F45 /* VCoachTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		187054481AE89306009D3F45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1870545A1AE89306009D3F45 /* InfoPlist.strings in Resources */,
+				187054651AE89306009D3F45 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187054681AE89306009D3F45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187054771AE89306009D3F45 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		187054461AE89306009D3F45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187054601AE89306009D3F45 /* AppDelegate.m in Sources */,
+				187054631AE89306009D3F45 /* VCoach.xcdatamodeld in Sources */,
+				1870545C1AE89306009D3F45 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187054661AE89306009D3F45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187054791AE89306009D3F45 /* VCoachTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		187054711AE89306009D3F45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 187054491AE89306009D3F45 /* VCoach */;
+			targetProxy = 187054701AE89306009D3F45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		187054581AE89306009D3F45 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				187054591AE89306009D3F45 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		187054751AE89306009D3F45 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				187054761AE89306009D3F45 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1870547A1AE89306009D3F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1870547B1AE89306009D3F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1870547D1AE89306009D3F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VCoach/VCoach-Prefix.pch";
+				INFOPLIST_FILE = "VCoach/VCoach-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1870547E1AE89306009D3F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VCoach/VCoach-Prefix.pch";
+				INFOPLIST_FILE = "VCoach/VCoach-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		187054801AE89306009D3F45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VCoach.app/VCoach";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VCoach/VCoach-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VCoachTests/VCoachTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		187054811AE89306009D3F45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VCoach.app/VCoach";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VCoach/VCoach-Prefix.pch";
+				INFOPLIST_FILE = "VCoachTests/VCoachTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		187054451AE89306009D3F45 /* Build configuration list for PBXProject "VCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1870547A1AE89306009D3F45 /* Debug */,
+				1870547B1AE89306009D3F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1870547C1AE89306009D3F45 /* Build configuration list for PBXNativeTarget "VCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1870547D1AE89306009D3F45 /* Debug */,
+				1870547E1AE89306009D3F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1870547F1AE89306009D3F45 /* Build configuration list for PBXNativeTarget "VCoachTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187054801AE89306009D3F45 /* Debug */,
+				187054811AE89306009D3F45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		187054611AE89306009D3F45 /* VCoach.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				187054621AE89306009D3F45 /* VCoach.xcdatamodel */,
+			);
+			currentVersion = 187054621AE89306009D3F45 /* VCoach.xcdatamodel */;
+			path = VCoach.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 187054421AE89306009D3F45 /* Project object */;
+}
