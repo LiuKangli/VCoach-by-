@@ -1,0 +1,124 @@
+//
+//  VTeacher.pch
+//  VCoach
+//
+//  Created by Moon on 16/1/8.
+//  Copyright © 2016年 apple. All rights reserved.
+//
+
+#ifndef VTeacher_pch
+#define VTeacher_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#import "SVProgressHUD.h"
+
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "AFURLSessionManager.h"
+//支付宝
+#import "DataSigner.h"
+#import "Order.h"
+#import <AlipaySDK/AlipaySDK.h>
+#import "APAuthV2Info.h"
+//ID
+#define partnerr @"2088911906773933"
+//接口名称
+#define sellerr @"whsbck@163.com"
+//私钥
+#define privateKeyy @"MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBANHDEjeIw2eQU6uitE16Qq1c4BLwiqI9a+hUzR8Fa9vrZjBEGeXj3EgTHWRvjFC9fcTxGz+XHH+Xpy/y9VSsjkcdC88Pdo19LnBTVAsfll9yHnzcM1HQb4OjLumw1MMeNhMlBcyWSVv0MjNpYLxSmz4VTxVQlRIPMhB3h+V/csXLAgMBAAECgYB1N8xjSkLgCdAn9slJDoxaMq9pBhCCr04wy8rAjhgDEl3NlRDf3eCISl4/dPJ1YB77Qj0W4Qvk5UthSST9h1wNr72lJSRye2D1msV80mF8CzLhrNgkCymhtOywrWdqI8uCtXp0QmqjDHhHfIiad0Ez/Zuybt1m4IZ82oIhxhFD+QJBAPgegvUL4Z74gfKlXoLRiHf9U+ln3xxIA8evjha93jMm8pMlokyYtWOGbw2gYjqxKuncD9CYwO967mU3SWionjcCQQDYbKwmNHVcLxaCjIX1MvWhjQv0iVtnSTTyeKg0y2zBlP+5JScZ642myRWAVIWhB0ABfVpFwHuqmZcQyoeibKsNAkEAkVLFnyL7XfHtoqILDhINnUHKEQ4elmDzndSMI3PHniw0rczAF57ltso5Z0DF59x25wxWUvX1Iw7cbHoKS/te1wJBAIGWKEnD9VWaGEdY7sjPl4YA11y3dhRVIC/jEQxzlY4fsjLgzRXXFfz8wDQT5+NwXOHHder4AtQ2nN5/9lDJ8m0CQDnGhgYdHYiFWjy+tE0hM736q6j3SCqLQOfWKobWvjmIbzx9p+8d8k2lFPsRhCRihDQrENAt8VcEvxG4IyAy2Ic="
+
+#define aliPaypublic @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDRwxI3iMNnkFOrorRNekKtXOAS8IqiPWvoVM0fBWvb62YwRBnl49xIEx1kb4xQvX3E8Rs/lxx/l6cv8vVUrI5HHQvPD3aNfS5wU1QLH5Zfch583DNR0G+Doy7psNTDHjYTJQXMlklb9DIzaWC8Ups+FU8VUJUSDzIQd4flf3LFywIDAQB"
+
+
+//#import <SystemConfiguration/SystemConfiguration.h>
+//#import <MobileCoreServices/MobileCoreServices.h>
+#define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define PW ([UIScreen mainScreen].bounds.size.width/375)
+#define PH ([UIScreen mainScreen].bounds.size.height/667)
+#define hiddenTabbar(A) self.tabBarController.tabBar.hidden =(A);
+
+#define backViewColor_gray  self.view.backgroundColor = [UIColor colorWithRed:0.886f green:0.886f blue:0.886f alpha:1.00f]
+#define cellbackcolor_gray self.backgroundColor = [UIColor colorWithRed:0.886f green:0.886f blue:0.886f alpha:1.00f]
+
+
+#define MainUrl @"http://192.168.1.129:8057/"
+#define ImageUrl @"http://192.168.1.129:8057/"
+
+
+#define viewBackColor self.view.backgroundColor = [UIColor whiteColor]
+
+
+#pragma API
+//获取用户资料
+#define getUserData @"index.php/api/get/user_profile"
+//（我的订单）获取订单资料
+#define OrderData @"index.php/api/get/user_order_list"
+//获取教练的详情
+#define GetTeacherDetail @"index.php/api/get/coacher_info"
+
+//获取首页课程名字
+#define MainGetClassName @"index.php/api/get/index_navigations"
+//通过课程类型选择课程列表
+#define MainClassList @"index.php/api/get/class_list_by_type"
+//获取滚动栏数据
+#define ScrollerData @"index.php/api/get/index_banner"
+
+//获取课程详情
+#define classDetail @"index.php/api/get/class_detail"
+
+//获取课程评论列表
+#define  ReqlyList @"index.php/api/get/class_reply"
+
+//获取教练列表
+#define teacherList @"index.php/api/get/coacher_list"
+
+//获取搜索列表
+#define  searchTeacherList @"index.php/api/get/search_coacher"
+
+//查看教练详情
+#define teacherDetail @"index.php/api/get/coacher_detail"
+
+//获取用户收货地址
+#define userAddress @"index.php/api/get/user_recieve_address"
+
+//匹配教练
+/**参数
+ *class_id
+ *address_id
+ */
+#define teaList @"index.php/api/get/class_available_coacher"
+//获取城市列表
+#define cityList @"index.php/api/get/place_infomation"
+
+//删除一个上门服务地址
+#define delectAd @"index.php/api/del/user_address"
+
+//修改地址
+#define updateAd @"index.php/api/put/change_address"
+
+//新增地址
+#define addAD @"index.php/api/post/new_address"
+
+//调取某个教练的可预约时段的状态
+#define  teacherTime @"index.php/api/get/coacher_available"
+
+//查看用户是否已经设置交易密码
+#define checkPassword @"index.php/api/get/user_isset_payment_password"
+//检查用户交易密码是否匹配
+#define CHECKMI @"index.php/api/get/payment_password_confirm"
+
+//写入未付款订单
+#define unPay @"index.php/api/post/order_record"
+
+//用户上传推送
+#define Tui @"index.php/api/post/new_channel_id"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* VTeacher_pch */

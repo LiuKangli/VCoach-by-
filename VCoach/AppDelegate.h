@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "BPush.h"
+#import "Reachability.h"
+@interface AppDelegate : UIResponder <UIApplicationDelegate,BPushDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -18,5 +19,6 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+@property(strong,nonatomic) Reachability*reach;
 
 @end

@@ -7,8 +7,17 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainViewController.h"
+#import "ServiceViewController.h"
+#import "CoachViewController.h"
+#import "MySelfViewController.h"
+#import "VTeacher.pch"
+//@class Reachability;
 @implementation AppDelegate
+{
+    NSString *Net_status;
+//    Reachability *hostReach;
+}
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -16,11 +25,178 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    Reachability *r = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    switch ([r currentReachabilityStatus]) {
+        case NotReachable:
+            // 没有网络连接
+            NSLog(@"没有网络");
+            [[NSUserDefaults standardUserDefaults]setObject:@"no_net" forKey:@"WLZT"];
+            
+            
+            
+            //            UIAlertView*aler=[[UIAlertView alloc]initWithTitle:@"提示" message:@"无网络连接,请连接网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            //            [aler show];
+            break;
+        case ReachableViaWWAN:
+            // 使用3G网络
+            NSLog(@"正在使用3G网络");
+            break;
+        case ReachableViaWiFi:
+            // 使用WiFi网络
+            NSLog(@"正在使用wifi网络");
+            break;
+    }
+    
+    ///开启网络状况的监听
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    self.reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    
+    [self.reach startNotifier];
+    //开始监听，会启动一个run loop
+
+    self.reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [self.reach startNotifier];
+    
+    
+    
+   
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    MainViewController *view = [[MainViewController alloc]init];
+    
+    
+    self.window.rootViewController = view;
+    
     [self.window makeKeyAndVisible];
+    
+    //百度推送
+    // iOS8 下需要使 新的 API
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+        UIUserNotificationType myTypes = UIUserNotificationTypeBadge | UIUserNotificationTypeSound
+        | UIUserNotificationTypeAlert;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:myTypes
+                                                                                 categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    }else {
+        UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound;
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
+    }
+    // 在 App 启动时注册百度云推送服务，需要提供 Apikey
+    [BPush registerChannel:launchOptions apiKey:@"mON0btzkZuBkt7vUkGyiGk6x" pushMode:BPushModeDevelopment isDebug:YES];
+    // 设置 BPush 的回调
+    [BPush setDelegate:self];
+
+    
+    // App 是用户点击推送消息启动
+    NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if (userInfo) {
+        NSLog(@"从消息启动:%@",userInfo);
+        [BPush handleNotification:userInfo];
+    }
     return YES;
+    
+}
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    Reachability *r = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    switch ([r currentReachabilityStatus]) {
+        case NotReachable:
+            // 没有网络连接
+            NSLog(@"没有网络");
+            [[NSUserDefaults standardUserDefaults]setObject:@"no_net" forKey:@"WLZT"];
+            
+            
+            
+            //            UIAlertView*aler=[[UIAlertView alloc]initWithTitle:@"提示" message:@"无网络连接,请连接网络" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            //            [aler show];
+            break;
+        case ReachableViaWWAN:
+            // 使用3G网络
+            [[NSUserDefaults standardUserDefaults]setObject:@"3G" forKey:@"WLZT"];
+            
+            NSLog(@"正在使用3G网络");
+            break;
+        case ReachableViaWiFi:
+            // 使用WiFi网络
+            NSLog(@"正在使用wifi网络");
+            [[NSUserDefaults standardUserDefaults]setObject:@"wifi" forKey:@"WLZT"];
+            
+            break;
+    }
+
+}
+//通知
+-(void)reachabilityChanged:(NSNotification*)note
+{
+    Reachability * reach = [note object];
+    NSParameterAssert([reach isKindOfClass: [Reachability class]]);
+    NetworkStatus status = [reach currentReachabilityStatus];
+    if (status == NotReachable) {
+        NSLog(@"Notification Says Unreachable");
+        [[NSUserDefaults standardUserDefaults]setObject:@"no_net" forKey:@"WLZT"];
+    }else if(status == ReachableViaWWAN){
+        
+        
+        NSLog(@"Notification Says mobilenet");
+        //array=[[NSMutableArray alloc]init];
+        [[NSUserDefaults standardUserDefaults]setObject:@"3G" forKey:@"WLZT"];
+    }else if(status == ReachableViaWiFi){
+        
+        
+        NSLog(@"Notification Says wifinet");
+        // array=[[NSMutableArray alloc]init];
+        [[NSUserDefaults standardUserDefaults]setObject:@"WIFI" forKey:@"WLZT"];
+    }
+    
+}
+
+-(void)onMethod:(NSString *)method response:(NSDictionary *)data{
+   // NSLog(@"嘿嘿嘿 ： %@",data);
+    NSString *channelID = [data objectForKey:@"channel_id"];
+    [[NSUserDefaults standardUserDefaults]setObject:channelID forKey:@"channe"];
+    
+}
+
+//支付宝回调
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    if ([url.host isEqualToString:@"safepay"]) {
+        //跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+        }];
+    }
+    return YES;
+}
+// 在 iOS8 系统中，还需要添加这个方法。通过新的 API 注册推送服务
+-(void)application:(UIApplication*)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
+    
+    [application registerForRemoteNotifications];
+    
+}
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(nonnull NSData *)deviceToken{
+    [BPush registerDeviceToken:deviceToken];
+    
+    [BPush bindChannel];
+
+}
+//查看deviceToken获取失败原因
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:( NSError *)error{
+    
+    NSLog(@"deviceToken获取失败原因为 %@",error);
+}
+//处理接收到的push消息
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo{
+   
+    NSLog(@"内容为： %@",[userInfo objectForKey:@"aps"]);
+    //app 收到推送通知
+    [BPush handleNotification:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -40,13 +216,10 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }

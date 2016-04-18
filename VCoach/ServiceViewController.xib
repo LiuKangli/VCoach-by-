@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceViewController">
+            <connections>
+                <outlet property="ClassVieW" destination="8nK-X2-iVQ" id="Cj7-jR-rZL"/>
+                <outlet property="NovButton" destination="Vw6-Mo-UPq" id="VTz-3H-1Yi"/>
+                <outlet property="NovImageView" destination="zWf-mo-VnY" id="rMv-xZ-KDL"/>
+                <outlet property="NovLable" destination="fN9-jO-vQL" id="LKT-bC-kTf"/>
+                <outlet property="NovLableImage" destination="RNh-4f-Q7g" id="MCz-4L-VRW"/>
+                <outlet property="NovView" destination="mSq-H9-Qgq" id="gGF-vs-xA5"/>
+                <outlet property="TuijianImage" destination="MxU-dG-Fek" id="dyU-xD-O9h"/>
+                <outlet property="TuijianLable" destination="pkf-Ou-8XL" id="vOC-Wz-5bk"/>
+                <outlet property="TuijianView" destination="MPm-ZN-1Ux" id="QaA-nV-57v"/>
+                <outlet property="classBtn1" destination="bhI-yr-Hz5" id="UYu-dc-Da0"/>
+                <outlet property="classBtn2" destination="YT2-3f-d3h" id="Puy-ga-9wg"/>
+                <outlet property="classBtn3" destination="bYf-qs-ZWX" id="CbK-Ip-Q3u"/>
+                <outlet property="classBtn4" destination="hOe-aC-Vav" id="p9A-t4-JyI"/>
+                <outlet property="gongfuimg1" destination="Vmr-HR-O5U" id="ay4-zB-yJ6"/>
+                <outlet property="gongfuimg2" destination="DlM-hN-cSN" id="7EM-xt-zKf"/>
+                <outlet property="gongfuimg3" destination="juq-z0-R4E" id="irJ-cF-4Pz"/>
+                <outlet property="gongfuimg4" destination="xA6-nu-dd0" id="yJ9-5S-KJv"/>
+                <outlet property="gongfutext1" destination="Aav-gI-5hy" id="WGM-tX-bXn"/>
+                <outlet property="gongfutext2" destination="Tei-8K-CQz" id="GPy-fD-GBW"/>
+                <outlet property="gongfutext3" destination="7oh-tz-Srz" id="a4B-CL-fR1"/>
+                <outlet property="gongfutext4" destination="RYf-HE-jN8" id="Hkp-Pf-aKn"/>
+                <outlet property="leftButtonText" destination="fN9-jO-vQL" id="rDS-bV-JVq"/>
+                <outlet property="pagecontrol" destination="9V4-RH-N4s" id="l4G-EO-a3D"/>
+                <outlet property="scrollview" destination="Bge-c8-oB8" id="Qa9-Mk-Zlq"/>
+                <outlet property="showimage" destination="BnT-6D-2Wx" id="a4n-Et-FOS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Bge-c8-oB8">
+                    <rect key="frame" x="0.0" y="33" width="375" height="634"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="9V4-RH-N4s">
+                            <rect key="frame" x="170" y="132" width="39" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </pageControl>
+                        <view contentMode="scaleToFill" id="8nK-X2-iVQ">
+                            <rect key="frame" x="0.0" y="163" width="375" height="57"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <view tag="2" contentMode="scaleToFill" id="YT2-3f-d3h" customClass="UIButton">
+                                    <rect key="frame" x="94" y="11" width="93" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gongfu2.png" id="DlM-hN-cSN">
+                                            <rect key="frame" x="7" y="6" width="26" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tei-8K-CQz">
+                                            <rect key="frame" x="41" y="10" width="52" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view tag="2" contentMode="scaleToFill" id="bhI-yr-Hz5" customClass="UIButton">
+                                    <rect key="frame" x="0.0" y="11" width="93" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Aav-gI-5hy">
+                                            <rect key="frame" x="41" y="10" width="52" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gongfu1.png" id="Vmr-HR-O5U">
+                                            <rect key="frame" x="7" y="6" width="26" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view tag="2" contentMode="scaleToFill" id="bYf-qs-ZWX" customClass="UIButton">
+                                    <rect key="frame" x="188" y="11" width="93" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gongfu3.png" id="juq-z0-R4E">
+                                            <rect key="frame" x="7" y="6" width="26" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7oh-tz-Srz">
+                                            <rect key="frame" x="41" y="10" width="52" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view tag="2" contentMode="scaleToFill" id="hOe-aC-Vav" customClass="UIButton">
+                                    <rect key="frame" x="282" y="11" width="93" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gongfu4.png" id="xA6-nu-dd0">
+                                            <rect key="frame" x="7" y="6" width="26" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RYf-HE-jN8">
+                                            <rect key="frame" x="41" y="10" width="52" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                        </view>
+                        <view contentMode="scaleToFill" id="MPm-ZN-1Ux">
+                            <rect key="frame" x="5" y="221" width="364" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为您推荐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pkf-Ou-8XL">
+                                    <rect key="frame" x="31" y="5" width="60" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuangou_icon.png" id="MxU-dG-Fek">
+                                    <rect key="frame" x="11" y="6" width="17" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BnT-6D-2Wx">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </scrollView>
+                    </subviews>
+                </scrollView>
+                <view contentMode="scaleToFill" id="mSq-H9-Qgq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_bg.png" id="zWf-mo-VnY">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="武汉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fN9-jO-vQL">
+                            <rect key="frame" x="8" y="28" width="43" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topico.png" id="RNh-4f-Q7g">
+                            <rect key="frame" x="49" y="42" width="10" height="7"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vw6-Mo-UPq">
+                            <rect key="frame" x="8" y="23" width="58" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="leftButton:" destination="-1" eventType="touchUpInside" id="hkS-Kq-geg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="499.5" y="198.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="gongfu1.png" width="16" height="21"/>
+        <image name="gongfu2.png" width="18" height="19"/>
+        <image name="gongfu3.png" width="16" height="20"/>
+        <image name="gongfu4.png" width="17" height="18"/>
+        <image name="top_bg.png" width="320" height="39"/>
+        <image name="topico.png" width="11" height="6"/>
+        <image name="tuangou_icon.png" width="20" height="19"/>
+    </resources>
+</document>
